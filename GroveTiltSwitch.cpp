@@ -1,11 +1,10 @@
 #include "GroveTiltSwitch.h"
 
-GroveTiltSwitch::GroveTiltSwitch(GrovePin pins) {
-	this->_pin = pins.pin1;
-	this->_state = false;
-}
+GroveTiltSwitch::GroveTiltSwitch() {}
 
-void GroveTiltSwitch::initialize() {	
+void GroveTiltSwitch::initialize(GrovePin pins) {
+	this->_pin = pins.pin1;
+	this->_state = false;	
 	pinMode(this->_pin, INPUT_PULLUP);
 }
 

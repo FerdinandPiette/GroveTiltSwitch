@@ -11,9 +11,8 @@ class GroveTiltSwitch {
 		void (*_callback)();
 		
 	public:
-		GroveTiltSwitch(GrovePin pins);
 		virtual ~GroveTiltSwitch() {};
-		void initialize();
+		void initialize(GrovePin pins);
 		boolean getState();
 		void activateOnChange(void (*callback)());
 		void deactivateOnChange();
